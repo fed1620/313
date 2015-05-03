@@ -1,0 +1,82 @@
+body {
+	background:  url("/images/mesh4.png");
+	color:       #00CC00;
+	font-family: courier;
+}
+
+hr {
+	width: 200px;
+}
+
+h2 {
+	text-align:  center;
+	font-weight: lighter;
+}
+
+h5 {
+	text-align:  right;
+	font-weight: lighter;
+}
+
+p {
+	color:black;
+}
+
+a:link {
+	color:           black;
+	text-decoration: none;
+}
+
+a:hover {
+	color: green;
+}
+
+#about {
+	border: 2px solid;
+	font-weight: lighter;
+	background-color: #D8D8D8;
+	width: 500px;
+	margin: auto; 
+	padding: 15px;
+}
+
+#navigation {
+ 	border: 2px solid; 
+ 	background-color: #D8D8D8; 
+ 	margin:           auto; 
+ 	padding:          15px;
+}
+
+#navigation_table {
+	width:      90%; 
+	margin:     auto; 
+	text-align: center;
+}
+
+#empty {
+    border: 2px solid transparent;
+	width: 500px;
+	margin: auto; 
+	padding: 15px;
+}
+
+#fed {
+	width:  150px; 
+	height: 150px; 
+	margin: auto; 
+	border: 2px solid;
+}
+
+#quote {
+	text-align:       center;
+	width:            450px; 
+	margin:           auto; 
+	border:           2px solid; 
+    padding:          15px; 
+    background-color: #D8D8D8;
+}
+
+#trying {
+	color:       #192B19; 
+	font-family: courier;
+}
