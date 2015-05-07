@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<form action="teamactivity2.php" method="POST">
+		<input type="text" name="name"  placeholder="Name"/><br/>
+		<input type="text" name="email" placeholder="Email"/>
+
+		<p>Select Major:</p>
+		<input type="radio" name="major" value="cs">Computer Science<br/>
+		<input type="radio" name="major" value="wd">Web Development and Design<br/>
+		<input type="radio" name="major" value="cit">Computer Information Technology<br/>
+		<input type="radio" name="major" value="ce">Computer Engineering<br/>
+
+		<p>Places You Have Visited:</p>
+		<input type="checkbox" name="visit[]" value="na">North America<br/>
+		<input type="checkbox" name="visit[]" value="sa">South America<br/>
+		<input type="checkbox" name="visit[]" value="eu">Europe<br/>
+		<input type="checkbox" name="visit[]" value="ai">Asia<br/>
+		<input type="checkbox" name="visit[]" value="au">Australia<br/>
+		<input type="checkbox" name="visit[]" value="af">Africa<br/>
+		<input type="checkbox" name="visit[]" value="ac">Antarctica<br/>
+
+		<p>Comments:</p>
+		<textarea name="comments" rows="4" cols="20">Comments...</textarea>
+		<br/>
+		<br/>
+
+		<input type="submit" value="Submit">
+	</form>
+</body>
+</html>

@@ -43,9 +43,20 @@
 
 				echo "Doing the rest of the things on the page...<br/>";
 
-			?>
+				$content = file_get_contents("myFile.txt");
 
+				echo "The content is: $content<br/>\n";
+
+				$phpVar = "Something from PHP";
+
+			?>
 		</div>
+
+		<script>
+			var content = "<?php echo $phpVar; ?>";
+			alert ("hello I am javascript. The file had " + content);
+		</script>
+
 	</body>
 
 </html>
