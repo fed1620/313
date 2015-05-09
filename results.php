@@ -13,13 +13,15 @@
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="survey.css"/>
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 		<title>Results</title>
 	</head>
 
 	<body>
 
 	<?php
-
 		// Get the survey answers from the form
 		$answer1 = $_POST['1'];
 		$answer2 = $_POST['2'];
@@ -122,8 +124,6 @@
 			// Question 1
 			fwrite($file, "$countQ1A\n");
 			fwrite($file, "$countQ1B\n");
-			// fwrite($file, "$countQ1C\n");
-			// fwrite($file, "$countQ1D\n");
 
 			// Question 2
 			fwrite($file, "$countQ2A\n");
@@ -151,12 +151,15 @@
 		}
 
 		// Output the HTML
-		echo"<br/><br/><br/><br/>\n";
+		echo "<h1>Results</h1>\n";
+		echo "<div class=\"container\">\n";
+		echo "<div class=\"jumbotron\" id=\"resultsBackground\">\n";
 		echo "<div id=\"results\">\n";
 
 		// Question 1
 		echo "<div class=\"header\">Is the glass half-empty or half-full?</div>\n";
-		echo"<table class=\"table\">\n";
+		echo"<table class=\"table table-striped\">\n";
+		echo "<tbody>\n";
 		echo "<tr>\n";
 		echo "<td>Half-empty</td>\n";
 		echo "<td class=\"answer\">$countQ1A</td>\n";
@@ -165,12 +168,14 @@
 		echo "<td>Half-full</td>\n";
 		echo "<td class=\"answer\">$countQ1B</td>\n";
 		echo "</tr>\n";
+		echo "</tbody>\n";
 		echo "<table>\n";
 		echo "<br/>\n";
 
 		// Question 2
 		echo "<div class=\"header\">What kind of bear is best?</div>\n";
-		echo"<table class=\"table\">\n";
+		echo "<table class=\"table table-striped\">\n";
+		echo "<tbody>\n";
 		echo "<tr>\n";
 		echo "<td>Black Bear</td>\n";
 		echo "<td class=\"answer\">$countQ2A</td>\n";
@@ -187,12 +192,14 @@
 		echo "<td>Battlestar Galactica</td>\n";
 		echo "<td class=\"answer\">$countQ2D</td>\n";
 		echo "</tr>\n";
+		echo "</tbody>\n";
 		echo "</table>\n";
 		echo "<br/>\n";
 
 		// Question 3
 		echo "<div class=\"header\">Which is your preferred gaming platform?</div>\n";
-		echo"<table class=\"table\">\n";
+		echo"<table class=\"table table-striped\">\n";
+		echo "<tbody>\n";
 		echo "<tr>\n";
 		echo "<td>Xbox</td>\n";
 		echo "<td class=\"answer\">$countQ3A</td>\n";
@@ -209,12 +216,14 @@
 		echo "<td>PC</td>\n";
 		echo "<td class=\"answer\">$countQ3D</td>\n";
 		echo "</tr>\n";
+		echo "</tbody>\n";
 		echo "</table>\n";
 		echo "<br/>\n";
 
 		// Question 4
 		echo "<div class=\"header\">Who would you rather upset?</div>\n";
-		echo"<table class=\"table\">\n";
+		echo"<table class=\"table table-striped\">\n";
+		echo "<tbody>\n";
 		echo "<tr>\n";
 		echo "<td>Liam Neeson</td>\n";
 		echo "<td class=\"answer\">$countQ4A</td>\n";
@@ -231,11 +240,12 @@
 		echo "<td>Bruce Banner</td>\n";
 		echo "<td class=\"answer\">$countQ4D</td>\n";
 		echo "</tr>\n";
-
+		echo "</tbody>\n";
 		echo "</table>\n";
+		
 		echo "</div>\n";
-
-
+		echo "</div>\n";
+		echo "</div>\n";
 		?>
 	</body>
 </html>
