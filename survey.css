@@ -6,3 +6,50 @@ h1 {
 	text-align:  center;
 	font-weight: lighter;
 }
+
+td {
+	border: 0px solid;
+	background-color: lightgrey;
+}
+
+.answer {
+	text-align: right;
+}
+
+.center {
+	text-align: center;
+}
+
+.header {
+	text-align: center;
+	font-weight: bolder;
+}
+
+.table {
+	table-layout: fixed;
+	width:300px;
+	background-color: white;
+}
+
+.question {
+	font-weight: bolder;
+}
+
+#questions {
+	width: 450px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 0px solid;
+}
+
+#results {
+	width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 0px solid;
+}
+
+#resultButton {
+	text-align: center;
+	margin: auto;
+}
