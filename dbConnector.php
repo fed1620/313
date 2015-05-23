@@ -20,6 +20,7 @@ function loadDatabase()
 			$user     = 'php';
 			$password = 'php-pass';
 			$host     = 'localhost';
+			$db = new PDO("mysql:host=$host;dbname=$dbName", $user, $password);
 		}
 		catch (PDOException $ex)
 		{
@@ -31,12 +32,17 @@ function loadDatabase()
 	{
       // In the openshift environment
       //echo "Using openshift credentials: ";
-		$host     = getenv('OPENSHIFT_MYSQL_DB_HOST');
-		$user     = getenv('OPENSHIFT_MYSQL_DB_USERNAME');
-		$password = getenv('OPENSHIFT_MYSQL_DB_PASSWORD');
+		define('DB_HOST', getenv('OPENSHIFT_MYSQL_DB_HOST'));
+		define('DB_PORT',getenv('OPENSHIFT_MYSQL_DB_PORT'));
+		define('DB_USER',getenv('OPENSHIFT_MYSQL_DB_USERNAME'));
+		define('DB_PASS',getenv('OPENSHIFT_MYSQL_DB_PASSWORD'));
+		$dbname = "project";
+
+		$dsn = 'mysql:dbname='.$dbname.';host='.DB_HOST.';port='.DB_PORT;
+		$db = new PDO($dsn, DB_USER, DB_PASS);
 	}
    // echo "host:$host;dbName=$dbName user:$user password:$password<br >\n";
-	$db = new PDO("mysql:host=$host;dbname=$dbName", $user, $password);
+	// $db = new PDO("mysql:host=$host;dbname=$dbName", $user, $password);
 
 	return $db;
 }
