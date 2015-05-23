@@ -1,0 +1,76 @@
+h1 {
+	text-align: center;
+}
+
+#text {
+	width: 450px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 0px solid;
+}
+
+.image {
+	width: 250px;
+	border: 0px solid;
+	display: inline-block;
+}
+
+.button {
+	text-align: center;
+	padding-right: 50px;
+	padding-top: 25px;
+}
+
+#info {
+	width: 190px;
+	height: 126px;
+	padding-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 0px solid;
+	display: inline-block;
+}
+
+#container {
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 0px solid;
+}
+
+#page {
+	border: 0px solid;
+	padding-bottom: 100px;
+	background-color: white; /*#CCEBCC*/
+}
+
+#php {
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 0px solid;
+}
+
+#closed {
+	color:red;
+	font-weight:bold;
+}
+
+#open {
+	color: green;
+	font-weight: bold;
+}
+
+#rating {
+	font-weight: bold;
+}
+
+.author {
+	font-weight: bold;
+}
+
+.panel {
+	font-size: 100%;
+	padding: 10px;
+	display: none;
+}
