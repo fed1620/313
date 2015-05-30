@@ -68,8 +68,16 @@
 				foreach ($db->query("SELECT AVG(rating_value) FROM ratings WHERE restaurant_id = $row[id];") as $rowTwo)
 				{
 					$rating = number_format($rowTwo[0],1);
-					echo "Average rating:<br/> <span class=\"rating\">$rating</span>"; 
-					echo " out of <span class=\"rating\">5</span>";
+
+					if ($rating != 0)
+					{	
+						echo "Average rating:<br/> <span class=\"rating\">$rating</span>"; 
+						echo " out of <span class=\"rating\">5</span>";						
+					}
+					else
+					{
+						echo "Average rating: <br/><span class=\"rating\">N/A</span>";
+					} 
 				}
 
 				echo "</div>\n";
@@ -81,7 +89,7 @@
 
 				// Button to view reviews
 				echo "<div class=\"button\">";
-				echo "<button type=\"submit\" class=\"btn btn-success btn-large\" name=\"id\" value=\"$array[$name]\">Reviews</button>";
+				echo "<button type=\"submit\" class=\"btn btn-primary btn-large\" name=\"id\" value=\"$array[$name]\">Reviews</button>";
 				echo "</div></div></div>";
 
 			}
