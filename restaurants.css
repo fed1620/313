@@ -1,4 +1,4 @@
-h1 {
+h1, h3 {
 	text-align: center;
 }
 
@@ -7,21 +7,10 @@ h1 {
 	margin-left: auto;
 	margin-right: auto;
 	border: 0px solid;
+	overflow: hidden;
 }
 
-.image {
-	width: 250px;
-	border: 0px solid;
-	display: inline-block;
-}
-
-.button {
-	text-align: center;
-	padding-right: 50px;
-	padding-top: 25px;
-}
-
-#info {
+.info {
 	width: 190px;
 	height: 126px;
 	padding-top: 10px;
@@ -29,6 +18,24 @@ h1 {
 	margin-right: auto;
 	border: 0px solid;
 	display: inline-block;
+	float: left;
+	text-align: right;
+}
+
+.image {
+	width: 250px;
+	border: 0px solid;
+	padding-left: 20px;
+	padding-top: 10px;
+	display: inline-block;
+	overflow: hidden;
+}
+
+
+.button {
+	text-align: center;
+	padding-right: 50px;
+	padding-top: 25px;
 }
 
 #container {
@@ -38,17 +45,17 @@ h1 {
 	border: 0px solid;
 }
 
-#page {
-	border: 0px solid;
-	padding-bottom: 100px;
-	background-color: white; /*#CCEBCC*/
-}
-
 #php {
+	padding-top: 1px;
+	padding-bottom: 20px;
+	padding-right: 0px;
+	padding-left: 0px;
+
 	width: 600px;
 	margin-left: auto;
 	margin-right: auto;
 	border: 0px solid;
+	background-color: #CCF5EA;
 }
 
 #closed {
@@ -61,16 +68,6 @@ h1 {
 	font-weight: bold;
 }
 
-#rating {
+.rating, .author {
 	font-weight: bold;
-}
-
-.author {
-	font-weight: bold;
-}
-
-.panel {
-	font-size: 100%;
-	padding: 10px;
-	display: none;
 }

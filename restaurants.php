@@ -1,100 +1,92 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<link rel="stylesheet" type="text/css" href="restaurants.css">
-		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-		<script src="restaurants.js"></script>
-		<title>Restaurants</title>
-	</head>
+<head>
+	<link rel="stylesheet" type="text/css" href="restaurants.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<title>Restaurants</title>
+</head>
 
-	<body>        
-		<h1>Rexburg's Restaurants</h1>
-		<div class="container">
-			<div class="jumbotron" id="page">
-				<div id="container" class = "container">
-					<div id="php" class="jumbotron">
-						<div id="text">
-							<?php
-							// DB Connector page
-							require("dbConnector.php");
+<body>        
+	<h1>Rexburg's Restaurants</h1>
+	<div class="container">
+		<form action="reviews.php" method="POST">
+			<?php
+			// Load the database
+			require("dbConnector.php");
+			$db = loadDatabase();	
 
-							// Set the proper time zone
-							date_default_timezone_set('America/Denver');
+			// Set the proper time zone
+			date_default_timezone_set('America/Denver');
 
-							$db = loadDatabase();	
+			// An array to store each restaurant
+			$array = array();
 
-							// A number!
-							$i = 1;
+			// Output restaurant information
+			foreach ($db->query('SELECT * FROM restaurants;') as $row)
+			{
+				echo "<div id=\"php\" class=\"jumbotron\">";
+				echo "<div id=\"text\">";
+				// Store the information for each restaurant
+				$id      = $row['id'];
+				$name    = $row['name'];
+				$picture = "images/$id.png";
+				$address = $row['address'];
+				$open    = $row['hour_open'];
+				$closed  = $row['hour_closed'];
 
-							// Output restaurant information
-							foreach ($db->query('SELECT * FROM restaurants;') as $row)
-							{
-								// Store the restaurant's name and image file location
-								$name    = $row['name'];
-								$picture = "\"images/$row[id]" . ".png\"";
+				// Map each restaurant's id to its name
+				$array[$name] = $id;									
 
-								// Special case for restaurants that are open 24/7
-								if (((strtotime($row[hour_closed]) - strtotime($row[hour_open])) / 3600) == 24)
-								{
-									echo "<h3>$name - <span id=\"open\">Open</span></h3>";
-									echo "<div id=\"info\" class=\"lead image\">";
-									echo "(Open 24 hours)<br/>";
-								}
-								else
-								{	// Depending on the time of day, display whether the restaurant is open or closed
-									if (time() > (strtotime($row[hour_closed])) || (time() < (strtotime($row[hour_open]))))
-									{
-										echo "<h3>$name - <span id=\"closed\">Closed</span></h3>";
-									}
-									else
-									{
-										echo "<h3>$name - <span id=\"open\">Open</span></h3>";				
-									}
-									echo "<div id=\"info\" class=\"lead\">";
-									echo date('g:i A', strtotime($row[hour_open])) . " - " . date('g:i A', strtotime($row[hour_closed])) . "<br/>";
-								}
+				// Special case for restaurants that are open 24/7
+				if (((strtotime($closed) - strtotime($open)) / 3600) == 24)
+				{
+					echo "<h3>$name - <span id=\"open\">Open</span></h3>";
+					echo "<div class=\"info lead\">";
+					echo "(Open 24 hours)<br/>";
+				}
+				else
+				{	// Depending on the time of day, display whether the restaurant is open or closed
+					if (time() > (strtotime($closed)) || (time() < (strtotime($open))))
+					{
+						echo "<h3>$name - <span id=\"closed\">Closed</span></h3>";
+					}
+					else
+					{
+						echo "<h3>$name - <span id=\"open\">Open</span></h3>";				
+					}
 
-								echo $row['address'] . "<br/>";
+					// Display the hours of operation for each restaurant
+					echo "<div class=\"info lead\">";
+					echo date('g:i A', strtotime($open)) . " - " . date('g:i A', strtotime($closed)) . "<br/>";
+				}
 
-								// Display the rating for each restaurant
-								foreach ($db->query("SELECT * FROM ratings WHERE restaurant_id = $row[id];") as $rowTwo)
-								{
-									echo "Average rating: <span id=\"rating\">$rowTwo[rating_value]/5</span>";
-								}
-								echo "</div>\n";
+				// Display the address of each restaurant
+				echo $address . "<br/>";
 
-								// Display the restaurant image
-								echo "<div class=\"image\">\n";
-								echo "<img src=$picture alt=\"Street View\"><br/>";
-								echo "</div>";
+				// Display the rating for each restaurant
+				foreach ($db->query("SELECT AVG(rating_value) FROM ratings WHERE restaurant_id = $row[id];") as $rowTwo)
+				{
+					$rating = number_format($rowTwo[0],1);
+					echo "Average rating:<br/> <span class=\"rating\">$rating</span>"; 
+					echo " out of <span class=\"rating\">5</span>";
+				}
 
-								// Button to view reviews
-								echo "<div id=\"flip" . $i . "\" class=\"button\">";
-								echo "<buttton class=\"btn btn-success btn-large\">Reviews</button>";
-								echo "</div>";
+				echo "</div>\n";
 
-								// Drop the reviews down
-								foreach ($db->query("SELECT * FROM reviews WHERE restaurant_id = $row[id];") as $rowThree)
-								{
-									// Make a date object for the date that each review was written
-									$date = date_create($rowThree[date_written]);
+				// Display the image for each restaurant
+				echo "<div class=\"image\">\n";
+				echo "<img src=$picture alt=\"Street View\"><br/>";
+				echo "</div>";
 
-									echo "<br/>";
-									echo "<div class=\"panel container\" id=\"panel" . $i . "\">";
-									echo "<span class=\"author\">$rowThree[author]<br/>";
-									echo date_format($date, 'M j, Y') . "</span><br/><br/>";
-									echo "$rowThree[content]";
-									echo "</div>";
-									$i++;
-								}
-							}
-							?>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</body>
+				// Button to view reviews
+				echo "<div class=\"button\">";
+				echo "<button type=\"submit\" class=\"btn btn-success btn-large\" name=\"id\" value=\"$array[$name]\">Reviews</button>";
+				echo "</div></div></div>";
+
+			}
+			?>
+		</form>
+	</div>
+</body>
 </html>
