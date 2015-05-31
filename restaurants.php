@@ -4,11 +4,11 @@
 	<link rel="stylesheet" type="text/css" href="restaurants.css">
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-	<title>Restaurants</title>
+	<title>Rexburg Appetite</title>
 </head>
 
 <body>        
-	<h1>Rexburg's Restaurants</h1>
+	<h1>Rexburg Appetite</h1>
 	<div class="container">
 		<form action="reviews.php" method="POST">
 			<?php
@@ -76,7 +76,8 @@
 					}
 					else
 					{
-						echo "Average rating: <br/><span class=\"rating\">N/A</span>";
+						echo "Average rating: <br/>
+						<span class=\"rating\">N/A</span>";
 					} 
 				}
 
