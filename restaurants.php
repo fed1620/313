@@ -90,7 +90,7 @@
 
 				// Button to view reviews
 				echo "<div class=\"button\">";
-				echo "<button type=\"submit\" class=\"btn btn-primary btn-large\" name=\"id\" value=\"$array[$name]\">Reviews</button>";
+				echo "<button type=\"submit\" class=\"btn btn-info btn-large\" name=\"id\" value=\"$array[$name]\">Reviews</button>";
 				echo "</div></div></div>";
 
 			}

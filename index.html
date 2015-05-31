@@ -1,75 +1,43 @@
-<!DOCTYPE html>
+
+<!DOCTYPE HTML>
 <html>
-  <!--Home-->
-  <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="index.css">
-    <title>CS 313 - Federico Martinez</title>
-  </head>
-  
-  <body>
-      <h2>Welcome to Federico's Home Page</h2>
+<head>
+	<link rel="stylesheet" href="index.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<title>Federico's Homepage</title>
+</head>
 
-    <div id="fed">
-        <img src="/images/myAvatar6.png" alt="Fed"/>
-    </div>
-
-    <br/>
-    <br/>
-    <br/>
-    
-    <div id="navigation">
-      <table id="navigation_table">
-        <tr>
-          <td>
-            <a class = "link" href="about.html">About</a>
-          </td>
-          <td>
-            <a class = "link" href="assignments.html">Assignments</a>
-          </td>
-          <td>
-            <a class = "link" href="http://www.github.com/fedffm">GitHub</a>
-          </td>
-        </tr>
-      </table>
-    </div>
-
-    <br/>
-
-    <div id="empty">
-      <p>
-        </br>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-    </p>
-
-    </div>
-
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-      
-      <div id="quote">
-        <a class="link" href="http://youtu.be/CNOutomr5XI">
-            "Trying is the first step toward failure"
-        </a>
-      </div>
-      
-      <br/>
-      <br/>         
-      
-      <footer>
-        <h5>
-          Website by Federico M.<br />
-          E-mail: mar09013@byui.edu
-        </h5>
-      </footer>
-    </body>
-  </html>
-  
+<body>
+	<div class="container">
+		<div id="header" class="jumbotron">
+			<h1>Federico's Homepage</h1>
+		</div>
+	</div>
+	<div class="container">
+		<div id="wrapper" class="jumbotron">
+			<div class="text">
+				<div class="lead">
+			<div id="quote">
+				<a class="lead" id="failure" href="http://youtu.be/CNOutomr5XI">"Trying is the first step toward failure"</a>
+			</div>
+				</div>
+			</div>		
+			<div id="buttons">
+				<div class="button">
+					<button class="btn btn-lg btn-success" onclick="location.href='index.html'">Home</button>
+				</div>
+				<div class="button">
+					<button class="btn btn-lg btn-success" onclick="location.href='assignments.html'">Assignments</button>
+				</div>
+				<div class="button">
+					<button class="btn btn-lg btn-success" onclick="location.href='http://www.github.com/fedffm'">GitHub</button>
+				</div>
+				<div class="button">
+					<button class="btn btn-lg btn-success" onclick="location.href='about.html'">About</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

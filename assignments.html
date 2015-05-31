@@ -1,17 +1,46 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title> CS 313 Assignments </title>
-		<link rel="stylesheet" type="text/css" href="assignments.css">
-	</head>
-	<body>
 
-		<br/>
-		<br/>
-		<br/>
-		<div id="assignments">
-			<a href="survey.php">PHP Survey</a><br/>
-			<a href="restaurants.php">PHP Project</a>
+<!DOCTYPE HTML>
+<html>
+<head>
+	<link rel="stylesheet" href="assignments.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<title>Assignments</title>
+</head>
+
+<body>
+	<div class="container">
+		<div id="header" class="jumbotron">
+			<h1>Assignments</h1>
 		</div>
-	</body>
+	</div>
+	<div class="container">
+		<div id="wrapper" class="jumbotron">
+			<div class="text">
+				<div id="links" class="lead">
+					<div class="button">
+						<button class="btn btn-large btn-primary" onclick="location.href='survey.php'">Survey</button><br/>
+					</div>
+					<div class="button">
+						<button class="btn btn-large btn-primary" onclick="location.href='restaurants.php'">PHP Project</button>
+					</div>
+				</div>
+			</div>		
+			<div id="buttons">
+				<div class="button">
+					<button class="btn btn-lg btn-success" onclick="location.href='index.html'">Home</button>
+				</div>
+				<div class="button">
+					<button class="btn btn-lg btn-success" onclick="location.href='assignments.html'">Assignments</button>
+				</div>
+				<div class="button">
+					<button class="btn btn-lg btn-success" onclick="location.href='http://www.github.com/fedffm'">GitHub</button>
+				</div>
+				<div class="button">
+					<button class="btn btn-lg btn-success" onclick="location.href='about.html'">About</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
 </html>
