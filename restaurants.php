@@ -23,7 +23,7 @@
 			$array = array();
 
 			// Output restaurant information
-			foreach ($db->query('SELECT * FROM restaurants;') as $row)
+			foreach ($db->query('SELECT * FROM restaurants ORDER BY name;') as $row)
 			{
 				echo "<div id=\"php\" class=\"jumbotron\">";
 				echo "<div id=\"text\">";

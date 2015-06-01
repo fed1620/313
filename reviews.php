@@ -63,7 +63,7 @@
  	 	</div>
  	 	<?php
  	 		// Display each review
- 	 		foreach ($db->query("SELECT * FROM reviews WHERE restaurant_id=$id;") as $row)
+ 	 		foreach ($db->query("SELECT * FROM reviews WHERE restaurant_id=$id ORDER BY date_written DESC;") as $row)
  	 		{
  	 			$date = date('M j Y', strtotime($row['date_written']));
  	 			echo "<div class=\"container\"><div id=\"reviewbackground\" class=\"jumbotron\">";
