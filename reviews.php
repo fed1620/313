@@ -62,10 +62,11 @@
 			</div>
  	 	</div>
  	 	<?php
- 	 		// Display each review
+ 	 		// Reviews are displayed according to the order in which they were written,
+ 	 		// with the most recent reviews being displayed first.
  	 		foreach ($db->query("SELECT * FROM reviews WHERE restaurant_id=$id ORDER BY date_written DESC;") as $row)
  	 		{
- 	 			$date = date('M j Y', strtotime($row['date_written']));
+ 	 			$date = date('M j, Y', strtotime($row['date_written']));
  	 			echo "<div class=\"container\"><div id=\"reviewbackground\" class=\"jumbotron\">";
  	 			echo "<p class=\"jumbotron\" id=\"review\">";
  	 			echo "<span id=\"author\">$row[author]<br/>$date<br/><br/></span>";

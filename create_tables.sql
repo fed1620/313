@@ -11,11 +11,23 @@ CREATE TABLE restaurants
 ( id           INT UNSIGNED PRIMARY KEY AUTO_INCREMENT
 , name         VARCHAR(128) NOT NULL
 , address      VARCHAR(128) NOT NULL
-, hour_open    TIME         NOT NULL
-, hour_closed  TIME         NOT NULL
+, phone        VARCHAR(16)  NOT NULL
 , cuisine_type VARCHAR(64)  NOT NULL
+, mon_open     TIME NOT NULL
+, mon_close    TIME NOT NULL
+, tue_open     TIME NOT NULL
+, tue_close    TIME NOT NULL
+, wed_open     TIME NOT NULL
+, wed_close    TIME NOT NULL
+, thu_open     TIME NOT NULL
+, thu_close    TIME NOT NULL
+, fri_open     TIME NOT NULL
+, fri_close    TIME NOT NULL
+, sat_open     TIME NOT NULL
+, sat_close    TIME NOT NULL
+, sun_open     TIME NOT NULL
+, sun_close    TIME NOT NULL
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 
 -- Create the reviews table
 SELECT 'REVIEWS' AS "Drop Table";

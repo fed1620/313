@@ -19,7 +19,12 @@
 			// Set the proper time zone
 			date_default_timezone_set('America/Denver');
 
-			// An array to store each restaurant
+			// Opening and closing times are dependent on the day of the week
+		   $day   = strtolower(date('D'));
+			$open  = $day . "_open";
+			$close = $day . "_close";
+
+			// An array that will store each restaurant
 			$array = array();
 
 			// Output restaurant information
@@ -28,26 +33,32 @@
 				echo "<div id=\"php\" class=\"jumbotron\">";
 				echo "<div id=\"text\">";
 				// Store the information for each restaurant
-				$id      = $row['id'];
-				$name    = $row['name'];
-				$picture = "images/$id.png";
-				$address = $row['address'];
-				$open    = $row['hour_open'];
-				$closed  = $row['hour_closed'];
+				$id          = $row['id'];
+				$name        = $row['name'];
+				$picture     = "images/$id.png";
+				$address     = $row['address'];
+				$hourOpen    = $row[$open];
+				$hourClosed  = $row[$close];
 
 				// Map each restaurant's id to its name
 				$array[$name] = $id;									
 
 				// Special case for restaurants that are open 24/7
-				if (((strtotime($closed) - strtotime($open)) / 3600) == 24)
+				if (((strtotime($hourClosed) - strtotime($hourOpen)) / 3600) == 24)
 				{
 					echo "<h3>$name - <span id=\"open\">Open</span></h3>";
 					echo "<div class=\"info lead\">";
 					echo "(Open 24 hours)<br/>";
 				}
+				else if (((strtotime($hourClosed) - strtotime($hourOpen)) / 3600) == 0)
+				{  // Restaurants that are closed on a given day
+					echo "<h3>$name - <span id=\"closed\">Closed</span></h3>";
+					echo "<div class=\"info lead\">";
+					echo "(Closed)<br/>";
+				}
 				else
 				{	// Depending on the time of day, display whether the restaurant is open or closed
-					if (time() > (strtotime($closed)) || (time() < (strtotime($open))))
+					if (time() > (strtotime($hourClosed)) || (time() < (strtotime($hourOpen))))
 					{
 						echo "<h3>$name - <span id=\"closed\">Closed</span></h3>";
 					}
@@ -58,7 +69,7 @@
 
 					// Display the hours of operation for each restaurant
 					echo "<div class=\"info lead\">";
-					echo date('g:i A', strtotime($open)) . " - " . date('g:i A', strtotime($closed)) . "<br/>";
+					echo date('g:i A', strtotime($hourOpen)) . " - " . date('g:i A', strtotime($hourClosed)) . "<br/>";
 				}
 
 				// Display the address of each restaurant
