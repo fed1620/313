@@ -37,6 +37,7 @@
 				$name        = $row['name'];
 				$picture     = "images/$id.png";
 				$address     = $row['address'];
+				$phone       = $row['phone'];
 				$hourOpen    = $row[$open];
 				$hourClosed  = $row[$close];
 
@@ -51,13 +52,13 @@
 					echo "(Open 24 hours)<br/>";
 				}
 				else if (((strtotime($hourClosed) - strtotime($hourOpen)) / 3600) == 0)
-				{  // Restaurants that are closed on a given day
+				{  // Special case for restaurants that are closed on a given day
 					echo "<h3>$name - <span id=\"closed\">Closed</span></h3>";
 					echo "<div class=\"info lead\">";
 					echo "(Closed)<br/>";
 				}
 				else
-				{	// Depending on the time of day, display whether the restaurant is open or closed
+				{	// Display whether or not a restaurant is currently open
 					if (time() > (strtotime($hourClosed)) || (time() < (strtotime($hourOpen))))
 					{
 						echo "<h3>$name - <span id=\"closed\">Closed</span></h3>";
@@ -72,10 +73,10 @@
 					echo date('g:i A', strtotime($hourOpen)) . " - " . date('g:i A', strtotime($hourClosed)) . "<br/>";
 				}
 
-				// Display the address of each restaurant
-				echo $address . "<br/>";
+				// Display the address and phone number of each restaurant
+				echo "$address<br/>$phone<br/>";
 
-				// Display the rating for each restaurant
+				// Display the average rating for each restaurant
 				foreach ($db->query("SELECT AVG(rating_value) FROM ratings WHERE restaurant_id = $row[id];") as $rowTwo)
 				{
 					$rating = number_format($rowTwo[0],1);
@@ -88,7 +89,7 @@
 					else
 					{
 						echo "Average rating: <br/>
-						<span class=\"rating\">N/A</span>";
+						<span class=\"rating\">(No ratings)</span>";
 					} 
 				}
 
