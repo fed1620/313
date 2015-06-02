@@ -242,6 +242,166 @@ VALUES
 , '00:00:00'
 , '00:00:00');
 
+-- FRONTIER PIES
+INSERT INTO restaurants
+( name
+, address
+, phone
+, cuisine_type
+, mon_open
+, mon_close
+, tue_open
+, tue_close
+, wed_open
+, wed_close
+, thu_open
+, thu_close
+, fri_open
+, fri_close
+, sat_open
+, sat_close
+, sun_open
+, sun_close)
+VALUES
+( 'Frontier Pies'
+, '460 W 4th S'
+, '(208) 356-3600'
+, 'American'
+, '6:30:00'
+, '22:00:00'
+, '6:30:00'
+, '22:00:00'
+, '6:30:00'
+, '22:00:00'
+, '6:30:00'
+, '22:00:00'
+, '6:30:00'
+, '23:00:00'
+, '6:30:00'
+, '23:00:00'
+, '00:00:00'
+, '00:00:00');
+
+-- GATOR JACK'S
+INSERT INTO restaurants
+( name
+, address
+, phone
+, cuisine_type
+, mon_open
+, mon_close
+, tue_open
+, tue_close
+, wed_open
+, wed_close
+, thu_open
+, thu_close
+, fri_open
+, fri_close
+, sat_open
+, sat_close
+, sun_open
+, sun_close)
+VALUES
+( 'Gator Jack\'s'
+, '160 W 2nd S'
+, '(208) 356-0779'
+, 'Sandwiches'
+, '7:00:00'
+, '21:00:00'
+, '7:00:00'
+, '21:00:00'
+, '7:00:00'
+, '21:00:00'
+, '7:00:00'
+, '21:00:00'
+, '7:00:00'
+, '22:00:00'
+, '7:00:00'
+, '22:00:00'
+, '00:00:00'
+, '00:00:00');
+
+-- GRINGO'S
+INSERT INTO restaurants
+( name
+, address
+, phone
+, cuisine_type
+, mon_open
+, mon_close
+, tue_open
+, tue_close
+, wed_open
+, wed_close
+, thu_open
+, thu_close
+, fri_open
+, fri_close
+, sat_open
+, sat_close
+, sun_open
+, sun_close)
+VALUES
+( 'Gringo\'s'
+, '43 S Center St'
+, '(208) 356-9400'
+, 'Mexican'
+, '11:00:00'
+, '21:30:00'
+, '11:00:00'
+, '21:30:00'
+, '11:00:00'
+, '21:30:00'
+, '11:00:00'
+, '21:30:00'
+, '11:00:00'
+, '22:00:00'
+, '11:00:00'
+, '22:00:00'
+, '00:00:00'
+, '00:00:00');
+
+-- NEW FONG'S
+INSERT INTO restaurants
+( name
+, address
+, phone
+, cuisine_type
+, mon_open
+, mon_close
+, tue_open
+, tue_close
+, wed_open
+, wed_close
+, thu_open
+, thu_close
+, fri_open
+, fri_close
+, sat_open
+, sat_close
+, sun_open
+, sun_close)
+VALUES
+( 'New Fong\'s'
+, '352 S 2nd W'
+, '(208) 359-9477'
+, 'Chinese'
+, '11:00:00'
+, '21:00:00'
+, '11:00:00'
+, '21:00:00'
+, '11:00:00'
+, '21:00:00'
+, '11:00:00'
+, '21:00:00'
+, '11:00:00'
+, '22:00:00'
+, '11:00:00'
+, '22:00:00'
+, '00:00:00'
+, '00:00:00');
+
 -- --------------------------------RATINGS--------------------------------------
 
 -- MCDONALD'S
