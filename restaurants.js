@@ -1,13 +1,13 @@
-// Toggle first panel
-$(document).ready(function() {
-	$("#flip1").click(function() {
-		$("#panel1").slideToggle("fast");
-	});
-});
+function checkSearchBar() {
+	// Get the references to the text input and the search button
+	var searchInput  = document.getElementById("searchinput").value;
+	var searchButton = document.getElementById("searchbutton");
 
-// Toggle second panel
-$(document).ready(function() {
-	$("#flip2").click(function() {
-		$("#panel2").slideToggle("fast");
-	});
-});
+	// The search button will only be active if there is input in the text box
+	if (searchInput == "") {
+		searchButton.disabled = true;
+	}
+	else {
+		searchButton.disabled = false;
+	}
+}

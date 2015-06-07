@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST')
 				<div id="stars">		
 					<form action="insertReviews.php" method="POST">
 						<input type="hidden" name="id" value=<?php print "$_POST[id]"?>>
-						<span class="lead choice">Choose a rating</span>		
+						<span class="lead choice">Choose A Rating</span>		
 						<span class="star-rating">
 							<input type="radio" name="rating" onclick="checkReview()" value="1"><i></i>
 							<input type="radio" name="rating" onclick="checkReview()" value="2"><i></i>
@@ -53,12 +53,13 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST')
 					</div>
 
 					<br/>
+					<br/>
 
 					<div id="input">
-						<input type="text" oninput="checkReview()" name="author" id="authortext" placeholder="Your name (Required)">
+						<input type="text" oninput="checkReview()" name="author" id="authortext" placeholder="First Name">
 						<br/>
 						<br/>
-						<textarea id="writereview" oninput="checkReview()" name="review" placeholder="Write your review here..."></textarea>
+						<textarea id="writereview" oninput="checkReview()" name="review" placeholder="Write Your Review Here"></textarea>
 					</div>
 					<br/>
 					<div class="button">

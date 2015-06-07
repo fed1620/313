@@ -11,9 +11,7 @@ p {
 }
 
 #header {
-	/*text-align: center;*/
 	width: 80%;
-	/*height: 100px;*/
 	margin-right: auto;
 	margin-left: auto;
 	font-weight: lighter;
@@ -113,6 +111,14 @@ p {
 	height: 50px;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+#sort {
+	width: 150px;
+}
+
+option {
+	width: 200px;
 }
 
 #main {

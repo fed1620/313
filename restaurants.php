@@ -4,10 +4,11 @@
 	<link rel="stylesheet" type="text/css" href="restaurants.css">
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<script src="restaurants.js"></script>
 	<title>Rexburg Bites</title>
 </head>
 
-<body>
+<body onload="checkSearchBar()">
 	<div class="container">
 		<div id="header" class="jumbotron">        
 			<span>Rexburg Bites</span>
@@ -18,11 +19,11 @@
 	<div id="searchForm">
 		<form action="restaurants.php" method="POST">
 			<div id="search" class="form-group">
-				<input type="text" name="search" class="form-control" placeholder="Search">
+				<input type="text" id="searchinput" name="search" class="form-control" placeholder="Search" oninput="checkSearchBar()">
 			</div>
-				<div id="searchButton">
-					<button type="submit" name="searchButton" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
-				</div>
+			<div id="searchButton">
+				<button type="submit" id="searchbutton" name="searchButton" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+			</div>
 		</form>
 	</div>
 	<br/>
@@ -50,26 +51,26 @@
 					$searchQuery = $_POST['search'];
 					$searchQuery = addslashes($searchQuery);
 
-        			$query = "SELECT * FROM restaurants WHERE name='" . $searchQuery . "';";
-        			$statement = $db->prepare($query);
+					$query = "SELECT * FROM restaurants WHERE name='" . $searchQuery . "';";
+					$statement = $db->prepare($query);
 					$statement->execute();
 
-        			if ($statement->rowCount() == 0)
-        			{
-        				echo "<p>Your search <span class=\"rating\">'" . $searchQuery . "'</span> did not match any restaurants</p>";
-        				echo "<div id=\"main\">";
-        				echo "<button type=\"button\" onclick=\"location.href='restaurants.php'\" class=\"button btn btn-large btn-primary\">Back to Main Page</button>";
-        				echo "</div>";
-        			}
+					if ($statement->rowCount() == 0)
+					{
+						echo "<p>Your search <span class=\"rating\">'" . stripslashes($searchQuery) . "'</span> did not match any restaurants</p>";
+						echo "<div id=\"main\">";
+						echo "<button type=\"button\" onclick=\"location.href='restaurants.php'\" class=\"button btn btn-large btn-primary\">Back to Main Page</button>";
+						echo "</div>";
+					}
 				} 
 			}
 			else 
 			{
-			$query = "SELECT * FROM restaurants ORDER BY name;";
+				$query = "SELECT * FROM restaurants ORDER BY name;";
 			}
 
 			// Opening and closing times are dependent on the day of the week
-		   $day   = strtolower(date('D'));
+			$day   = strtolower(date('D'));
 			$open  = $day . "_open";
 			$close = $day . "_close";
 
@@ -162,28 +163,28 @@
 					}
 					else
 					{  // Special case for restaurants that haven't been rated yet
-						echo "Average rating: <br/>\n";
-						echo "<span class=\"rating\">(No ratings)</span>\n";
-					} 
-				}
+				echo "Average rating: <br/>\n";
+				echo "<span class=\"rating\">(No ratings)</span>\n";
+			} 
+		}
 
-				echo "</div>\n";
+		echo "</div>\n";
 
 				// Display the image for each restaurant
-				echo "<div class=\"image\">\n";
-				echo "<img src=$picture alt=\"Street View\"><br/>\n";
-				echo "</div>";
+		echo "<div class=\"image\">\n";
+		echo "<img src=$picture alt=\"Street View\"><br/>\n";
+		echo "</div>";
 
 				// Button to view reviews
-				echo "<div class=\"button\">\n";
-				echo "<button type=\"submit\" class=\"btn btn-info btn-large\" name=\"id\" value=\"$array[$name]\">Reviews</button>\n";
-				echo "</div>\n";
-				echo "</div>\n";
-				echo "</div>\n";
+		echo "<div class=\"button\">\n";
+		echo "<button type=\"submit\" class=\"btn btn-info btn-large\" name=\"id\" value=\"$array[$name]\">Reviews</button>\n";
+		echo "</div>\n";
+		echo "</div>\n";
+		echo "</div>\n";
 
-			}
-			?>
-		</form>
-	</div>
+	}
+	?>
+</form>
+</div>
 </body>
 </html>
