@@ -10,6 +10,18 @@ p {
 	padding-bottom: 50px;
 }
 
+#header {
+	/*text-align: center;*/
+	width: 80%;
+	/*height: 100px;*/
+	margin-right: auto;
+	margin-left: auto;
+	font-weight: lighter;
+	font-size: 450%;
+	color: #595C5C;
+	background-color: #EDFFFF;
+}
+
 #text {
 	width: 450px;
 	margin-left: auto;

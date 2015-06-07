@@ -1442,6 +1442,166 @@ VALUES
 , '00:00:00'
 , '24:00:00');
 
+-- TACO BELL (37)
+INSERT INTO restaurants
+( name
+, address
+, phone
+, cuisine_type
+, mon_open
+, mon_close
+, tue_open
+, tue_close
+, wed_open
+, wed_close
+, thu_open
+, thu_close
+, fri_open
+, fri_close
+, sat_open
+, sat_close
+, sun_open
+, sun_close)
+VALUES
+( 'Taco Bell'
+, '22 West Main St'
+, '(208) 656-0220'
+, 'Fast Food'
+, '10:00:00'
+, '23:00:00'
+, '10:00:00'
+, '23:00:00'
+, '10:00:00'
+, '23:00:00'
+, '10:00:00'
+, '23:00:00'
+, '10:00:00'
+, '24:00:00'
+, '10:00:00'
+, '24:00:00'
+, '10:00:00'
+, '23:00:00');
+
+-- DOMINO'S (38)
+INSERT INTO restaurants
+( name
+, address
+, phone
+, cuisine_type
+, mon_open
+, mon_close
+, tue_open
+, tue_close
+, wed_open
+, wed_close
+, thu_open
+, thu_close
+, fri_open
+, fri_close
+, sat_open
+, sat_close
+, sun_open
+, sun_close)
+VALUES
+( 'Domino\'s Pizza'
+, '155 W Main St'
+, '(208) 356-9555'
+, 'Pizza'
+, '10:30:00'
+, '24:00:00'
+, '10:30:00'
+, '24:00:00'
+, '10:30:00'
+, '24:00:00'
+, '10:30:00'
+, '24:00:00'
+, '10:30:00'
+, '01:00:00'
+, '10:30:00'
+, '01:00:00'
+, '10:30:00'
+, '24:00:00');
+
+-- JIMMY JOHN'S (39)
+INSERT INTO restaurants
+( name
+, address
+, phone
+, cuisine_type
+, mon_open
+, mon_close
+, tue_open
+, tue_close
+, wed_open
+, wed_close
+, thu_open
+, thu_close
+, fri_open
+, fri_close
+, sat_open
+, sat_close
+, sun_open
+, sun_close)
+VALUES
+( 'Jimmy John\'s'
+, '109 S 2nd W'
+, '(208) 656-0556'
+, 'Sandwiches'
+, '10:30:00'
+, '23:00:00'
+, '10:30:00'
+, '23:00:00'
+, '10:30:00'
+, '23:00:00'
+, '10:30:00'
+, '23:00:00'
+, '00:00:00'
+, '00:00:00'
+, '10:30:00'
+, '24:00:00'
+, '00:00:00'
+, '00:00:00');
+
+-- BURGER KING (40)
+INSERT INTO restaurants
+( name
+, address
+, phone
+, cuisine_type
+, mon_open
+, mon_close
+, tue_open
+, tue_close
+, wed_open
+, wed_close
+, thu_open
+, thu_close
+, fri_open
+, fri_close
+, sat_open
+, sat_close
+, sun_open
+, sun_close)
+VALUES
+( 'Burger King'
+, '944 University Blv #2'
+, '(208) 356-5128'
+, 'Fast Food'
+, '06:00:00'
+, '23:00:00'
+, '06:00:00'
+, '23:00:00'
+, '06:00:00'
+, '23:00:00'
+, '06:00:00'
+, '23:00:00'
+, '06:00:00'
+, '23:00:00'
+, '06:00:00'
+, '01:00:00'
+, '06:00:00'
+, '01:00:00');
+
 -- --------------------------------RATINGS--------------------------------------
 
 -- MCDONALD'S

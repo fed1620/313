@@ -7,8 +7,12 @@
 	<title>Rexburg Bites</title>
 </head>
 
-<body>        
-	<h1>Rexburg Bites</h1>
+<body>
+	<div class="container">
+		<div id="header" class="jumbotron">        
+			<span>Rexburg Bites</span>
+		</div>
+	</div>
 	<br/>
 
 	<div id="searchForm">
