@@ -2,6 +2,14 @@ h1, h3 {
 	text-align: center;
 }
 
+p {
+	font-size: 200%;
+	font-weight: lighter;
+	text-align: center;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
 #text {
 	width: 450px;
 	margin-left: auto;
@@ -38,11 +46,11 @@ h1, h3 {
 	padding-top: 25px;
 }
 
-#container {
+.container {
 	width: 600px;
 	margin-left: auto;
 	margin-right: auto;
-	border: 0px solid;
+	border: 0px solid green;
 }
 
 #php {
@@ -54,7 +62,7 @@ h1, h3 {
 	width: 600px;
 	margin-left: auto;
 	margin-right: auto;
-	border: 0px solid;
+	border: 0px solid blue;
 	background-color: #CCF5EA;
 }
 
@@ -68,6 +76,33 @@ h1, h3 {
 	font-weight: bold;
 }
 
+#late {
+	color: blue;
+	font-weight: bold;
+}
+
 .rating, .author {
 	font-weight: bold;
+}
+
+#search {
+	width: 209px;
+	float: left;
+	display: inline-block;
+}
+
+#searchButton {
+	float: right;
+	display: inline-block;
+}
+
+#searchForm {
+	width: 250px;
+	height: 50px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#main {
+	text-align: center;
 }

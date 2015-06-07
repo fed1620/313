@@ -2,7 +2,7 @@ USE project;
 
 -- --------------------------------RESTAURANTS--------------------------------------
 
--- MCDONALD'S
+-- MCDONALD'S (1)
 INSERT INTO restaurants
 ( name
 , address
@@ -42,7 +42,7 @@ VALUES
 , '00:00:00'
 , '24:00:00');
 
--- ORIGINAL THAI
+-- ORIGINAL THAI (2)
 INSERT INTO restaurants
 ( name
 , address
@@ -82,7 +82,7 @@ VALUES
 , '00:00:00'
 , '00:00:00');
 
--- PIZZA PIE CAFE
+-- PIZZA PIE CAFE (3)
 INSERT INTO restaurants
 ( name
 , address
@@ -122,7 +122,7 @@ VALUES
 , '00:00:00'
 , '00:00:00');
 
--- COSTA VIDA
+-- COSTA VIDA (4)
 INSERT INTO restaurants
 ( name
 , address
@@ -162,7 +162,7 @@ VALUES
 , '00:00:00'
 , '00:00:00');
 
--- MILL HOLLOW
+-- MILL HOLLOW (5)
 INSERT INTO restaurants
 ( name
 , address
@@ -202,7 +202,7 @@ VALUES
 , '10:30:00'
 , '22:30:00');
 
--- MANDARIN
+-- MANDARIN (6)
 INSERT INTO restaurants
 ( name
 , address
@@ -242,7 +242,7 @@ VALUES
 , '00:00:00'
 , '00:00:00');
 
--- FRONTIER PIES
+-- FRONTIER PIES (7)
 INSERT INTO restaurants
 ( name
 , address
@@ -282,7 +282,7 @@ VALUES
 , '00:00:00'
 , '00:00:00');
 
--- GATOR JACK'S
+-- GATOR JACK'S (8)
 INSERT INTO restaurants
 ( name
 , address
@@ -322,7 +322,7 @@ VALUES
 , '00:00:00'
 , '00:00:00');
 
--- GRINGO'S
+-- GRINGO'S (9)
 INSERT INTO restaurants
 ( name
 , address
@@ -362,7 +362,7 @@ VALUES
 , '00:00:00'
 , '00:00:00');
 
--- NEW FONG'S
+-- NEW FONG'S (10)
 INSERT INTO restaurants
 ( name
 , address
@@ -402,6 +402,1046 @@ VALUES
 , '00:00:00'
 , '00:00:00');
 
+-- FONG'S (11)
+INSERT INTO restaurants
+( name
+, address
+, phone
+, cuisine_type
+, mon_open
+, mon_close
+, tue_open
+, tue_close
+, wed_open
+, wed_close
+, thu_open
+, thu_close
+, fri_open
+, fri_close
+, sat_open
+, sat_close
+, sun_open
+, sun_close)
+VALUES
+( 'Fong\'s'
+, '26 E Main St'
+, '(208) 359-2566'
+, 'Chinese'
+, '11:00:00'
+, '21:00:00'
+, '11:00:00'
+, '21:00:00'
+, '11:00:00'
+, '21:00:00'
+, '11:00:00'
+, '21:00:00'
+, '11:00:00'
+, '22:00:00'
+, '11:00:00'
+, '22:00:00'
+, '00:00:00'
+, '00:00:00');
+
+-- THE HICKORY (12)
+INSERT INTO restaurants
+( name
+, address
+, phone
+, cuisine_type
+, mon_open
+, mon_close
+, tue_open
+, tue_close
+, wed_open
+, wed_close
+, thu_open
+, thu_close
+, fri_open
+, fri_close
+, sat_open
+, sat_close
+, sun_open
+, sun_close)
+VALUES
+( 'The Hickory'
+, '155 W Main St'
+, '(208) 359-2328'
+, 'Barbecue'
+, '11:00:00'
+, '21:30:00'
+, '11:00:00'
+, '21:30:00'
+, '11:00:00'
+, '21:30:00'
+, '11:00:00'
+, '21:30:00'
+, '11:00:00'
+, '22:00:00'
+, '11:00:00'
+, '22:00:00'
+, '00:00:00'
+, '00:00:00');
+
+-- RAMIREZ (13)
+INSERT INTO restaurants
+( name
+, address
+, phone
+, cuisine_type
+, mon_open
+, mon_close
+, tue_open
+, tue_close
+, wed_open
+, wed_close
+, thu_open
+, thu_close
+, fri_open
+, fri_close
+, sat_open
+, sat_close
+, sun_open
+, sun_close)
+VALUES
+( 'Ramirez'
+, '27 W Main St'
+, '(208) 359-8114'
+, 'Mexican'
+, '09:00:00'
+, '23:00:00'
+, '09:00:00'
+, '23:00:00'
+, '09:00:00'
+, '23:00:00'
+, '09:00:00'
+, '23:00:00'
+, '09:00:00'
+, '01:00:00'
+, '09:00:00'
+, '01:00:00'
+, '00:00:00'
+, '00:00:00');
+
+-- WINGER'S (14)
+INSERT INTO restaurants
+( name
+, address
+, phone
+, cuisine_type
+, mon_open
+, mon_close
+, tue_open
+, tue_close
+, wed_open
+, wed_close
+, thu_open
+, thu_close
+, fri_open
+, fri_close
+, sat_open
+, sat_close
+, sun_open
+, sun_close)
+VALUES
+( 'Winger\'s'
+, '469 N 2nd E'
+, '(208) 356-4542'
+, 'Bar & Grill'
+, '08:00:00'
+, '22:00:00'
+, '08:00:00'
+, '22:00:00'
+, '08:00:00'
+, '22:00:00'
+, '08:00:00'
+, '22:00:00'
+, '09:00:00'
+, '23:00:00'
+, '09:00:00'
+, '23:00:00'
+, '00:00:00'
+, '00:00:00');
+
+-- PIZZA HUT (15)
+INSERT INTO restaurants
+( name
+, address
+, phone
+, cuisine_type
+, mon_open
+, mon_close
+, tue_open
+, tue_close
+, wed_open
+, wed_close
+, thu_open
+, thu_close
+, fri_open
+, fri_close
+, sat_open
+, sat_close
+, sun_open
+, sun_close)
+VALUES
+( 'Pizza Hut'
+, '163 W Main St'
+, '(208) 356-7811'
+, 'Pizza'
+, '11:00:00'
+, '22:30:00'
+, '11:00:00'
+, '22:30:00'
+, '11:00:00'
+, '22:30:00'
+, '11:00:00'
+, '22:30:00'
+, '11:00:00'
+, '23:00:00'
+, '11:00:00'
+, '23:00:00'
+, '12:00:00'
+, '22:30:00');
+
+-- NEW YORK BURRITO (16)
+INSERT INTO restaurants
+( name
+, address
+, phone
+, cuisine_type
+, mon_open
+, mon_close
+, tue_open
+, tue_close
+, wed_open
+, wed_close
+, thu_open
+, thu_close
+, fri_open
+, fri_close
+, sat_open
+, sat_close
+, sun_open
+, sun_close)
+VALUES
+( 'New York Burrito'
+, '80 E Main St'
+, '(208) 356-3446'
+, 'Mexican'
+, '10:30:00'
+, '21:00:00'
+, '10:30:00'
+, '21:00:00'
+, '10:30:00'
+, '21:00:00'
+, '10:30:00'
+, '21:00:00'
+, '10:30:00'
+, '22:00:00'
+, '10:30:00'
+, '22:00:00'
+, '00:00:00'
+, '00:00:00');
+
+-- ARCTIC CIRCLE (17)
+INSERT INTO restaurants
+( name
+, address
+, phone
+, cuisine_type
+, mon_open
+, mon_close
+, tue_open
+, tue_close
+, wed_open
+, wed_close
+, thu_open
+, thu_close
+, fri_open
+, fri_close
+, sat_open
+, sat_close
+, sun_open
+, sun_close)
+VALUES
+( 'Arctic Circle'
+, '210 N 2nd E'
+, '(208) 356-3640'
+, 'Fast Food'
+, '09:00:00'
+, '22:30:00'
+, '09:00:00'
+, '22:30:00'
+, '09:00:00'
+, '22:30:00'
+, '09:00:00'
+, '22:30:00'
+, '09:00:00'
+, '23:00:00'
+, '09:00:00'
+, '23:00:00'
+, '00:00:00'
+, '00:00:00');
+
+-- R-TOWNE CAFE (18)
+INSERT INTO restaurants
+( name
+, address
+, phone
+, cuisine_type
+, mon_open
+, mon_close
+, tue_open
+, tue_close
+, wed_open
+, wed_close
+, thu_open
+, thu_close
+, fri_open
+, fri_close
+, sat_open
+, sat_close
+, sun_open
+, sun_close)
+VALUES
+( 'R-Towne Cafe'
+, '12 W Main St'
+, '(208) 359-3001'
+, 'Cafe'
+, '07:00:00'
+, '20:00:00'
+, '07:00:00'
+, '20:00:00'
+, '07:00:00'
+, '20:00:00'
+, '07:00:00'
+, '20:00:00'
+, '07:00:00'
+, '20:00:00'
+, '07:00:00'
+, '20:00:00'
+, '00:00:00'
+, '00:00:00');
+
+-- JB'S RESTAURANT (19)
+INSERT INTO restaurants
+( name
+, address
+, phone
+, cuisine_type
+, mon_open
+, mon_close
+, tue_open
+, tue_close
+, wed_open
+, wed_close
+, thu_open
+, thu_close
+, fri_open
+, fri_close
+, sat_open
+, sat_close
+, sun_open
+, sun_close)
+VALUES
+( 'JB\'s Restaurant'
+, '150 W Main St'
+, '(208) 356-4927'
+, 'American'
+, '05:00:00'
+, '22:00:00'
+, '05:00:00'
+, '22:00:00'
+, '05:00:00'
+, '22:00:00'
+, '05:00:00'
+, '22:00:00'
+, '05:00:00'
+, '22:00:00'
+, '05:00:00'
+, '22:00:00'
+, '00:00:00'
+, '00:00:00');
+
+-- DAIRY QUEEN (20)
+INSERT INTO restaurants
+( name
+, address
+, phone
+, cuisine_type
+, mon_open
+, mon_close
+, tue_open
+, tue_close
+, wed_open
+, wed_close
+, thu_open
+, thu_close
+, fri_open
+, fri_close
+, sat_open
+, sat_close
+, sun_open
+, sun_close)
+VALUES
+( 'Dairy Queen'
+, '346 N 2nd E'
+, '(208) 356-7384'
+, 'Fast Food'
+, '10:00:00'
+, '23:00:00'
+, '10:00:00'
+, '23:00:00'
+, '10:00:00'
+, '23:00:00'
+, '10:00:00'
+, '23:00:00'
+, '10:00:00'
+, '24:00:00'
+, '10:00:00'
+, '24:00:00'
+, '14:00:00'
+, '21:00:00');
+
+-- DA PINEAPPLE GRILL (21)
+INSERT INTO restaurants
+( name
+, address
+, phone
+, cuisine_type
+, mon_open
+, mon_close
+, tue_open
+, tue_close
+, wed_open
+, wed_close
+, thu_open
+, thu_close
+, fri_open
+, fri_close
+, sat_open
+, sat_close
+, sun_open
+, sun_close)
+VALUES
+( 'Da Pineapple Grill'
+, '383 S 2nd W'
+, '(208) 356-4398'
+, 'Hawaiian'
+, '11:30:00'
+, '21:00:00'
+, '17:00:00'
+, '21:00:00'
+, '11:30:00'
+, '21:00:00'
+, '17:00:00'
+, '21:00:00'
+, '11:30:00'
+, '22:00:00'
+, '17:00:00'
+, '22:00:00'
+, '00:00:00'
+, '00:00:00');
+
+-- JACK IN THE BOX (22)
+INSERT INTO restaurants
+( name
+, address
+, phone
+, cuisine_type
+, mon_open
+, mon_close
+, tue_open
+, tue_close
+, wed_open
+, wed_close
+, thu_open
+, thu_close
+, fri_open
+, fri_close
+, sat_open
+, sat_close
+, sun_open
+, sun_close)
+VALUES
+( 'Jack in the Box'
+, '461 N 2nd E'
+, '(208) 656-9284'
+, 'Fast Food'
+, '08:00:00'
+, '24:00:00'
+, '08:00:00'
+, '24:00:00'
+, '08:00:00'
+, '24:00:00'
+, '08:00:00'
+, '24:00:00'
+, '08:00:00'
+, '01:00:00'
+, '08:00:00'
+, '01:00:00'
+, '08:30:00'
+, '24:00:00');
+
+-- SUBWAY (23)
+INSERT INTO restaurants
+( name
+, address
+, phone
+, cuisine_type
+, mon_open
+, mon_close
+, tue_open
+, tue_close
+, wed_open
+, wed_close
+, thu_open
+, thu_close
+, fri_open
+, fri_close
+, sat_open
+, sat_close
+, sun_open
+, sun_close)
+VALUES
+( 'Subway'
+, '321 N 2nd E'
+, '(208) 356-8234'
+, 'Fast Food'
+, '07:00:00'
+, '23:00:00'
+, '07:00:00'
+, '23:00:00'
+, '07:00:00'
+, '23:00:00'
+, '07:00:00'
+, '24:00:00'
+, '08:00:00'
+, '24:00:00'
+, '08:00:00'
+, '24:00:00'
+, '09:00:00'
+, '17:00:00');
+
+-- PAPA MURPHY'S (24)
+INSERT INTO restaurants
+( name
+, address
+, phone
+, cuisine_type
+, mon_open
+, mon_close
+, tue_open
+, tue_close
+, wed_open
+, wed_close
+, thu_open
+, thu_close
+, fri_open
+, fri_close
+, sat_open
+, sat_close
+, sun_open
+, sun_close)
+VALUES
+( 'Papa Murphy\'s'
+, '64 N 2nd E'
+, '(208) 356-8900'
+, 'Pizza'
+, '11:00:00'
+, '21:00:00'
+, '11:00:00'
+, '21:00:00'
+, '11:00:00'
+, '21:00:00'
+, '11:00:00'
+, '21:00:00'
+, '11:00:00'
+, '21:00:00'
+, '11:00:00'
+, '22:00:00'
+, '00:00:00'
+, '00:00:00');
+
+-- BLISTER'S BBQ (25)
+INSERT INTO restaurants
+( name
+, address
+, phone
+, cuisine_type
+, mon_open
+, mon_close
+, tue_open
+, tue_close
+, wed_open
+, wed_close
+, thu_open
+, thu_close
+, fri_open
+, fri_close
+, sat_open
+, sat_close
+, sun_open
+, sun_close)
+VALUES
+( 'Blister\'s BBQ'
+, '15 N 12th W'
+, '(208) 356-3965'
+, 'Barbecue'
+, '11:00:00'
+, '20:00:00'
+, '11:00:00'
+, '20:00:00'
+, '11:00:00'
+, '20:00:00'
+, '11:00:00'
+, '20:00:00'
+, '11:00:00'
+, '21:00:00'
+, '00:00:00'
+, '00:00:00'
+, '00:00:00'
+, '00:00:00');
+
+-- SHAKE OUT (26)
+INSERT INTO restaurants
+( name
+, address
+, phone
+, cuisine_type
+, mon_open
+, mon_close
+, tue_open
+, tue_close
+, wed_open
+, wed_close
+, thu_open
+, thu_close
+, fri_open
+, fri_close
+, sat_open
+, sat_close
+, sun_open
+, sun_close)
+VALUES
+( 'Shake Out'
+, '110 Viking Dr'
+, '(208) 932-1828'
+, 'American'
+, '16:00:00'
+, '23:00:00'
+, '16:00:00'
+, '23:00:00'
+, '16:00:00'
+, '23:00:00'
+, '16:00:00'
+, '23:00:00'
+, '16:00:00'
+, '24:00:00'
+, '12:00:00'
+, '23:00:00'
+, '00:00:00'
+, '00:00:00');
+
+-- TACO TIME (27)
+INSERT INTO restaurants
+( name
+, address
+, phone
+, cuisine_type
+, mon_open
+, mon_close
+, tue_open
+, tue_close
+, wed_open
+, wed_close
+, thu_open
+, thu_close
+, fri_open
+, fri_close
+, sat_open
+, sat_close
+, sun_open
+, sun_close)
+VALUES
+( 'Taco Time'
+, '274 S 2nd W'
+, '(208) 356-9005'
+, 'Mexican'
+, '07:30:00'
+, '23:00:00'
+, '07:30:00'
+, '23:00:00'
+, '07:30:00'
+, '23:00:00'
+, '07:30:00'
+, '23:00:00'
+, '07:30:00'
+, '23:00:00'
+, '07:30:00'
+, '23:00:00'
+, '00:00:00'
+, '00:00:00');
+
+-- ARBY'S (28)
+INSERT INTO restaurants
+( name
+, address
+, phone
+, cuisine_type
+, mon_open
+, mon_close
+, tue_open
+, tue_close
+, wed_open
+, wed_close
+, thu_open
+, thu_close
+, fri_open
+, fri_close
+, sat_open
+, sat_close
+, sun_open
+, sun_close)
+VALUES
+( 'Arby\'s'
+, '478 N 2nd E'
+, '(208) 359-1345'
+, 'Fast Food'
+, '10:00:00'
+, '21:00:00'
+, '10:00:00'
+, '21:00:00'
+, '10:00:00'
+, '21:00:00'
+, '10:00:00'
+, '21:00:00'
+, '10:00:00'
+, '21:00:00'
+, '10:00:00'
+, '21:00:00'
+, '10:00:00'
+, '18:00:00');
+
+-- KFC (29)
+INSERT INTO restaurants
+( name
+, address
+, phone
+, cuisine_type
+, mon_open
+, mon_close
+, tue_open
+, tue_close
+, wed_open
+, wed_close
+, thu_open
+, thu_close
+, fri_open
+, fri_close
+, sat_open
+, sat_close
+, sun_open
+, sun_close)
+VALUES
+( 'KFC'
+, '568 N 2nd E'
+, '(208) 356-7374'
+, 'Fast Food'
+, '10:30:00'
+, '22:00:00'
+, '10:30:00'
+, '22:00:00'
+, '10:30:00'
+, '22:00:00'
+, '10:30:00'
+, '22:00:00'
+, '10:30:00'
+, '22:00:00'
+, '10:30:00'
+, '22:00:00'
+, '10:30:00'
+, '21:00:00');
+
+-- APPLEBEE'S (30)
+INSERT INTO restaurants
+( name
+, address
+, phone
+, cuisine_type
+, mon_open
+, mon_close
+, tue_open
+, tue_close
+, wed_open
+, wed_close
+, thu_open
+, thu_close
+, fri_open
+, fri_close
+, sat_open
+, sat_close
+, sun_open
+, sun_close)
+VALUES
+( 'Applebee\'s'
+, '975 University Blvd'
+, '(208) 359-9922'
+, 'American'
+, '11:00:00'
+, '24:00:00'
+, '11:00:00'
+, '24:00:00'
+, '11:00:00'
+, '24:00:00'
+, '11:00:00'
+, '24:00:00'
+, '11:00:00'
+, '24:00:00'
+, '11:00:00'
+, '24:00:00'
+, '11:00:00'
+, '23:00:00');
+
+-- LITTLE CAESAR'S (31)
+INSERT INTO restaurants
+( name
+, address
+, phone
+, cuisine_type
+, mon_open
+, mon_close
+, tue_open
+, tue_close
+, wed_open
+, wed_close
+, thu_open
+, thu_close
+, fri_open
+, fri_close
+, sat_open
+, sat_close
+, sun_open
+, sun_close)
+VALUES
+( 'Little Caesar\'s'
+, '26 W 1st S'
+, '(208) 359-0071'
+, 'Pizza'
+, '09:00:00'
+, '23:00:00'
+, '09:00:00'
+, '23:00:00'
+, '09:00:00'
+, '23:00:00'
+, '09:00:00'
+, '23:00:00'
+, '09:00:00'
+, '23:00:00'
+, '15:00:00'
+, '23:00:00'
+, '00:00:00'
+, '00:00:00');
+
+-- WENDY'S (32)
+INSERT INTO restaurants
+( name
+, address
+, phone
+, cuisine_type
+, mon_open
+, mon_close
+, tue_open
+, tue_close
+, wed_open
+, wed_close
+, thu_open
+, thu_close
+, fri_open
+, fri_close
+, sat_open
+, sat_close
+, sun_open
+, sun_close)
+VALUES
+( 'Wendy\'s'
+, '545 N 2nd E'
+, '(208) 356-9667'
+, 'Fast Food'
+, '10:00:00'
+, '24:00:00'
+, '10:00:00'
+, '24:00:00'
+, '10:00:00'
+, '24:00:00'
+, '10:00:00'
+, '24:00:00'
+, '10:00:00'
+, '24:00:00'
+, '10:00:00'
+, '24:00:00'
+, '11:00:00'
+, '21:00:00');
+
+-- GREAT HARVEST BREAD CO. (33)
+INSERT INTO restaurants
+( name
+, address
+, phone
+, cuisine_type
+, mon_open
+, mon_close
+, tue_open
+, tue_close
+, wed_open
+, wed_close
+, thu_open
+, thu_close
+, fri_open
+, fri_close
+, sat_open
+, sat_close
+, sun_open
+, sun_close)
+VALUES
+( 'Great Harvest Bread Co.'
+, '19 E Main St'
+, '(208) 356-6579'
+, 'Sandwiches'
+, '07:00:00'
+, '19:00:00'
+, '07:00:00'
+, '19:00:00'
+, '07:00:00'
+, '19:00:00'
+, '07:00:00'
+, '19:00:00'
+, '07:00:00'
+, '23:00:00'
+, '07:00:00'
+, '19:00:00'
+, '00:00:00'
+, '00:00:00');
+
+-- TOGO'S SANDWICHES. (34)
+INSERT INTO restaurants
+( name
+, address
+, phone
+, cuisine_type
+, mon_open
+, mon_close
+, tue_open
+, tue_close
+, wed_open
+, wed_close
+, thu_open
+, thu_close
+, fri_open
+, fri_close
+, sat_open
+, sat_close
+, sun_open
+, sun_close)
+VALUES
+( 'Togo\'s Sandwiches'
+, '485 N 2nd E Ste. 105'
+, '(208) 372-8040'
+, 'Sandwiches'
+, '11:00:00'
+, '21:00:00'
+, '11:00:00'
+, '21:00:00'
+, '11:00:00'
+, '21:00:00'
+, '11:00:00'
+, '21:00:00'
+, '11:00:00'
+, '21:00:00'
+, '11:00:00'
+, '21:00:00'
+, '00:00:00'
+, '00:00:00');
+
+-- BIG JUD'S COUNTRY DINER. (35)
+INSERT INTO restaurants
+( name
+, address
+, phone
+, cuisine_type
+, mon_open
+, mon_close
+, tue_open
+, tue_close
+, wed_open
+, wed_close
+, thu_open
+, thu_close
+, fri_open
+, fri_close
+, sat_open
+, sat_close
+, sun_open
+, sun_close)
+VALUES
+( 'Big Jud\'s Country Diner'
+, '411 W 7800 S'
+, '(208) 359-2833'
+, 'Sandwiches'
+, '11:00:00'
+, '21:00:00'
+, '11:00:00'
+, '21:00:00'
+, '11:00:00'
+, '21:00:00'
+, '11:00:00'
+, '21:00:00'
+, '11:00:00'
+, '22:00:00'
+, '11:00:00'
+, '22:00:00'
+, '00:00:00'
+, '00:00:00');
+
+-- MCDONALD'S (36)
+INSERT INTO restaurants
+( name
+, address
+, phone
+, cuisine_type
+, mon_open
+, mon_close
+, tue_open
+, tue_close
+, wed_open
+, wed_close
+, thu_open
+, thu_close
+, fri_open
+, fri_close
+, sat_open
+, sat_close
+, sun_open
+, sun_close)
+VALUES
+( 'McDonald\'s'
+, '850 University Blvd'
+, '(208) 356-6141'
+, 'Fast Food'
+, '00:00:00'
+, '24:00:00'
+, '00:00:00'
+, '24:00:00'
+, '00:00:00'
+, '24:00:00'
+, '00:00:00'
+, '24:00:00'
+, '00:00:00'
+, '24:00:00'
+, '00:00:00'
+, '24:00:00'
+, '00:00:00'
+, '24:00:00');
+
 -- --------------------------------RATINGS--------------------------------------
 
 -- MCDONALD'S
@@ -415,28 +1455,23 @@ INSERT INTO ratings
 VALUES
 (1, 4);
 
--- ORIGINAL THAI
 INSERT INTO ratings
 (restaurant_id, rating_value)
 VALUES
-(2, 5);
+(1, 2);
 
+INSERT INTO ratings
+(restaurant_id, rating_value)
+VALUES
+(1, 1);
+
+-- ORIGINAL THAI
 INSERT INTO ratings
 (restaurant_id, rating_value)
 VALUES
 (2, 4);
 
-INSERT INTO ratings
-(restaurant_id, rating_value)
-VALUES
-(2, 5);
-
 -- PIZZA PIE CAFE
-INSERT INTO ratings
-(restaurant_id, rating_value)
-VALUES
-(3, 4);
-
 INSERT INTO ratings
 (restaurant_id, rating_value)
 VALUES
@@ -453,32 +1488,7 @@ INSERT INTO ratings
 VALUES
 (4, 4);
 
-INSERT INTO ratings
-(restaurant_id, rating_value)
-VALUES
-(4, 5);
-
-INSERT INTO ratings
-(restaurant_id, rating_value)
-VALUES
-(4, 5);
-
 -- MILL HOLLOW
-INSERT INTO ratings
-(restaurant_id, rating_value)
-VALUES
-(5, 4);
-
-INSERT INTO ratings
-(restaurant_id, rating_value)
-VALUES
-(5, 5);
-
-INSERT INTO ratings
-(restaurant_id, rating_value)
-VALUES
-(5, 5);
-
 INSERT INTO ratings
 (restaurant_id, rating_value)
 VALUES
@@ -490,36 +1500,9 @@ INSERT INTO ratings
 VALUES
 (6, 2);
 
-INSERT INTO ratings
-(restaurant_id, rating_value)
-VALUES
-(6, 5);
-
 -- --------------------------------REVIEWS--------------------------------------
 
 -- MCDONALD'S
-INSERT INTO reviews 
-( restaurant_id
-, author
-, content
-, date_written)
-VALUES
-( 1
-, 'George'
-, 'After playing in the ball pit, I contracted three different diseases. Won\'t be coming back for a while.'
-, '2014-05-01');
-
-INSERT INTO reviews 
-( restaurant_id
-, author
-, content
-, date_written)
-VALUES
-( 1
-, 'Sarah'
-, 'I gained twelve pounds overnight!'
-, '2014-05-09');
-
 INSERT INTO reviews 
 ( restaurant_id
 , author
@@ -539,32 +1522,9 @@ INSERT INTO reviews
 , date_written)
 VALUES
 ( 2
-, 'Lindsay'
-, 'Yum! I loved it!' 
-, '2014-04-012');
-
-INSERT INTO reviews 
-( restaurant_id
-, author
-, content
-, date_written)
-VALUES
-( 2
 , 'Steve'
 , 'I had to donate plasma five times just to be able to afford eating here. For that reason, I gave this place 4/5.' 
 , '2014-04-20');
-
--- PIZZA PIE CAFE
-INSERT INTO reviews 
-( restaurant_id
-, author
-, content
-, date_written)
-VALUES
-( 3
-, 'Rob'
-, 'Made it to twenty-three slices before puking. Was this my proudest moment? You bet it was.' 
-, '2014-03-08');
 
 -- PIZZA PIE CAFE
 INSERT INTO reviews 
@@ -578,29 +1538,6 @@ VALUES
 , 'PIZZAAAAAA!' 
 , '2015-05-31');
 
--- COSTA VIDA
-INSERT INTO reviews 
-( restaurant_id
-, author
-, content
-, date_written)
-VALUES
-( 4
-, 'Jenny'
-, 'Their horchata made me realize that my whole life has been a lie!' 
-, '2014-04-17');
-
-INSERT INTO reviews 
-( restaurant_id
-, author
-, content
-, date_written)
-VALUES
-( 4
-, 'Owen'
-, 'Meh.' 
-, '2014-05-06');
-
 -- MILL HOLLOW
 INSERT INTO reviews 
 ( restaurant_id
@@ -611,7 +1548,7 @@ VALUES
 ( 5
 , 'Fed'
 , 'Their banana peach smoothie has taught me the meaning of life :\')' 
-, '2014-05-02');
+, '2015-06-01');
 
 -- MANDARIN
 INSERT INTO reviews 

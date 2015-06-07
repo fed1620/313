@@ -1,3 +1,10 @@
+<?php
+if ($_SERVER['REQUEST_METHOD'] != 'POST') 
+{
+	header("Location: restaurants.php");
+	die();
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
