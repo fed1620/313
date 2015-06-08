@@ -1,81 +1,62 @@
 <?php
-// Start by loading the database
-require("dbConnector.php");
-$db = loadDatabase();
-?>
-
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Test</title>
-</head>
-
-<body>
-	<form action="test.php" method="POST">
-		<input type="text" id="searchinput" name="search"placeholder="Search"> <br/> <br/>
-		<button type="submit" name="button">Submit</button>
-	</form>
-
-<?php
-//Call the search method
-search($db);
+/******************************************************************************
+* search.php
+*
+* Author: Federico Martinez
+*
+* This search method takes a reference to a database, and a string as a parameter.
+* The string is then broken up into keywords to determine what type of query to
+* use, and whether or not any of the keywords match anything in the database.
+*******************************************************************************/
 
 /******************************************************************************
 * SEARCH
 * This function uses the provided input to build a query
 *******************************************************************************/
-function search($db) {
-
-	$query = buildQuery($db);
+function search($db, $searchWord, $tableName) 
+{
+	// Build a query, if there are any matches
+	$query = buildQuery($db, $searchWord, $tableName);
 
 	if ($query)
-		echo "The resulting query: $query<br/>";
+		return $query;
 	else
-		echo "Returning false...<br/>";
+		return FALSE;
 }
 
 /******************************************************************************
 * BUILD QUERY
 * This function uses the provided input to build a query
 *******************************************************************************/
-function buildQuery($db) 
+function buildQuery($db, $searchWord, $tableName) 
 {
 	$query = "";     // This will be our MySQL query
 	$found = FALSE;  // Whether or not the above query returns any rows
 
-	if ($_SERVER['REQUEST_METHOD'] === 'POST') 
+	// Break up the user's input into multiple words (keywords)
+	$keywords = explode(" ", $searchWord);
+
+	// This loop will query the database for each individual keyword
+	for ($i = 0; $i < str_word_count($searchWord); $i++)
 	{
-		if (isset($_POST['button'])) 
-		{
-			$searchWord = $_POST['search'];
+		$searchQuery = $keywords[$i];
 
-			// Break up the user's input into multiple words (keywords)
-			$keywords = explode(" ", $searchWord);
+		// Insert an apostrophe, if the user forgot to put one 
+		$newString = insertApostrophe($searchQuery);
+		if ($newString)
+			$searchQuery = $newString;
 
-			// This loop will query the database for each individual keyword
-			for ($i = 0; $i < str_word_count($searchWord); $i++)
-			{
-				$searchQuery = $keywords[$i];
+		// Escape any special characters
+		$searchQuery = addslashes($searchQuery);
 
-				// Insert an apostrophe, if the user forgot to put one 
-				$newString = insertApostrophe($searchQuery);
+		// Decide which kind of query to make
+		$query = determineQueryType($searchQuery, $tableName);
 
-				if ($newString)
-					$searchQuery = $newString;
-
-				$searchQuery = addslashes($searchQuery);
-				$query 	  	 = determineQueryType($searchQuery);
-
-				if (executeQuery($db, $query))
-					return $query;
-			}
-			return FALSE;
-		} 
+		// If the query returns any rows, return that query
+		if (executeQuery($db, $query))
+			return $query;
 	}
-	else 
-	{
-		die();
-	}	
+	return FALSE; 
 }
 
 /******************************************************************************
@@ -105,13 +86,13 @@ function insertApostrophe($searchQuery)
 * DETERMINE QUERY TYPE
 * This function determines which type of query we will use: LIKE or REGEXP
 *******************************************************************************/
-function determineQueryType($searchQuery)
+function determineQueryType($searchQuery, $tableName)
 {
 	// Do LIKE if they keyword is large enough...
 	if (strlen($searchQuery) >= 4)
-		return "SELECT * FROM restaurants WHERE name LIKE '%$searchQuery%';";					
+		return "SELECT * FROM $tableName WHERE name LIKE '%$searchQuery%';";					
 	else
-		return "SELECT * FROM restaurants WHERE name REGEXP '[[:<:]]" . $searchQuery . "[[:>:]]'";
+		return "SELECT * FROM $tableName WHERE name REGEXP '[[:<:]]" . $searchQuery . "[[:>:]]'";
 }
 
 /******************************************************************************
@@ -131,6 +112,3 @@ function executeQuery($db, $query)
 		return FALSE;
 }
 ?>
-
-</body>
-</html>
