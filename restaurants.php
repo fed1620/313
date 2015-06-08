@@ -1,4 +1,7 @@
 <?php
+// Set the proper time zone
+date_default_timezone_set('America/Denver');
+
 // Get the necessary files and load the database;
 require("dbConnector.php");
 require("search.php");
